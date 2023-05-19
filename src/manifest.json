@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "PanoptoStrip",
+  "version": "1.0",
+
+  "description": "Removes left panel and slides at the bottom of page to make it more suitable for splitscreen",
+
+  "icons": {
+    "16": "icons/PanoptoStrip-16.png",
+    "32": "icons/PanoptoStrip-32.png",
+    "64": "icons/PanoptoStrip-64.png",
+    "128": "icons/PanoptoStrip-128.png",
+    "256": "icons/PanoptoStrip-256.png"
+    
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.panopto.eu/*"],
+      "js": ["PanoptoStrip.js"]
+    }
+  ]
+
+}
+

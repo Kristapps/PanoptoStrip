@@ -1,25 +1,27 @@
-const leftPane = document.getElementById("leftPane");
-leftPane.style.display = "none";
+const cssRules = `
+  #leftPane,
+  #thumbnailList {
+    display: none !important;
+  }
 
+  #rightPlayersContainer,
+  #secondaryScreen,
+  .secondary-content.screen-capture {
+    width: 100% !important;
+    height: 100% !important;
+  }
 
-const thumbnailList = document.getElementById("thumbnailList");
-thumbnailList.style.display = "none";
+  .secondary-content.screen-capture {
+    width: 100vw !important;
+    height: 75vw !important;
+  }
 
-const rightPlayersContainer = document.getElementById("rightPlayersContainer");
-const secondaryScreen = document.getElementById("secondaryScreen");
-const secondaryContentScreenCapture = document.querySelector(".secondary-content.screen-capture");
+  #secondaryScreen {
+    margin: -300px 0 0 -380px !important;
+  }
+`;
 
-rightPlayersContainer.style.width = "100%";
-rightPlayersContainer.style.height = "100%";
+const styleElement = document.createElement('style');
+styleElement.textContent = cssRules;
 
-
-setInterval(() => {
-    rightPlayersContainer.style.width = "100%";
-    rightPlayersContainer.style.height = "100%";
-    secondaryContentScreenCapture.style.width="100vw";
-    secondaryContentScreenCapture.style.height="80vh";
-    secondaryScreen.style.height = "100%";
-    secondaryScreen.style.width = "100%";
-    secondaryScreen.style.marginTop="-300px"
-    secondaryScreen.style.marginLeft="-380px"
-  }, 1);
+document.head.appendChild(styleElement);

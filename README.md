@@ -2,7 +2,7 @@
 This is a web browser extension to make panopto recordings more suitable for split screen display.
 
 Currently using it for Firefox extensions but should also work for chrome since its based on it.
-#To install locally for firefox:
+# To install locally for firefox:
 1. Go to the url and type: about:debugging
 2. There should be a 'Temporary Extensions' section.
 3. Press 'Load Temporary Add-on...' and navigate to the git repo.
